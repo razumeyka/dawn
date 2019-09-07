@@ -1,0 +1,165 @@
+@font-face {
+  font-family: 'Lora';
+  src: url('../fonts/Lora-Regular.eot?#iefix') format('embedded-opentype'),  url('../fonts/Lora-Regular.otf') format('opentype'),
+	     url('../fonts/Lora-Regular.woff') format('woff'), url('../fonts/Lora-Regular.ttf')  format('truetype'), url('../fonts/Lora-Regular.svg#Lora-Regular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lora';
+  src: url('../fonts/Lora-Bold.eot?#iefix') format('embedded-opentype'),  url('../fonts/Lora-Bold.otf')  format('opentype'),
+	     url('../fonts/Lora-Bold.woff') format('woff'), url('../fonts/Lora-Bold.ttf')  format('truetype'), url('../fonts/Lora-Bold.svg#Lora-Bold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+
+body{
+	background: url(../../images/pattern.png) repeat center, #FFFBF7;
+    margin:0;
+	padding: 0;
+	font-family: 'Lora', sans-serif;
+	font-size: 17px;
+    font-weight: 400;
+	color: #262626;
+	line-height:1.4; 
+	min-width: 360px;
+}
+
+button,input,select,textarea{
+    font-family: 'Lora'; 
+    font-size: 17px;
+} 
+
+p {
+    font: 400 18px/1.45 'Lora';
+    color: #000000;
+    margin: 20px 0;
+}
+
+.wrapper {
+    max-width:1200px;
+    padding:0 40px;
+    margin:0 auto;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex_between {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.caption {
+	position: relative;
+}
+
+.caption:before {
+	content: "";
+	box-sizing: border-box;
+	border-top: 2px solid #E6C0A2;
+	border-left: 2px solid #E6C0A2;
+	border-right: 2px solid #E6C0A2;
+	width: 62px;
+	height: 20px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: -20px;
+	margin: 0 auto;
+}
+
+.caption:after{
+	content: "";
+	box-sizing: border-box;
+	border-bottom: 2px solid #E6C0A2;
+	border-left: 2px solid #E6C0A2;
+	border-right: 2px solid #E6C0A2;
+	width: 62px;
+	height: 20px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -20px;
+	margin: 0 auto;
+}
+
+.caption__text1 {
+	font: 700 35px 'Lora';
+	line-height: 1;
+	text-align: center;
+	color: #272727;
+	margin: 0;
+}
+
+.caption__text1_white {
+	color: #ffffff;
+}
+
+.caption__text2 {
+	font: 400 13px 'Lora';
+	text-align: center;
+	text-transform: uppercase;
+	color: #A0795B;
+	margin: 0;
+}
+
+
+/* buttons */
+
+.button {
+    display: inline-block;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-decoration: none;
+    outline: 0;
+    text-align: center;
+    width: 100%;
+	background: linear-gradient(180deg, #675546 0%, #423429 100%), #5B4C40;
+	border: none;
+	border-radius: 45px;
+	max-width: 252px;
+	height: 78px;
+	font:400 18px/78px "Lora";
+	color: #FFFFFF;
+}
+
+.button:hover{
+	background: linear-gradient(180deg, #423429 0%, #675546 100%), #5B4C40;
+}
+
+
+
+/*media*/ 
+
+@media screen and (max-width: 1279px) {
+	.wrapper {
+		padding: 0 15px;
+	}
+	
+}
+
+@media screen and (max-width: 1023px) {
+    
+		
+}
+
+@media screen and (max-width: 767px) {
+    
+
+}
+
+@media screen and (max-width: 639px) {
+	
+
+	
+	
+}
+
+
+
+
