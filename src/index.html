@@ -4,18 +4,24 @@
 <body class="home">
     @@include('template/header.html')
     @@include('template/main-screen.html')
-    <div class="wrapper">
-    	<div class="caption">
-    		<div class="caption__text1">О гостинице</div>
-    		<h2 class="caption__text2">Гостиница в Тотьме</h2>
-    	</div>
-    	<p>Наши гости оценивают его как уютный и комфортный. Именно по этой причине многие возвращаются к нам снова, ведь жить там, где царит спокойная атмосфера, а обстановка напоминает родной дом, всегда приятно. Персонал поддерживает в гостинице атмосферу русского гостеприимства и стремится сделать пребывание в гостинице комфортным. Если Вы планируете провести выходной в Тотьме или Вам предстоит командировка – выбирайте нашу гостиницу. Дешево, уютно, комфортно и весело – такие впечатления остаются после посещения гостиницы «Картуши». Забронировать номер легко! Выберите удобный для себя способ: заполните форму на сайте, оставьте заявку в группе ВКонтакте или просто позвоните. Побывав у нас однажды, Вы обязательно вернетесь сюда снова. Приезжаете в Тотьму – останавливайтесь в гостинице «Картуши»!</p>
-    </div>
+    @@include('template/info-screen.html')
     @@include('template/service-screen.html')
     @@include('template/rooms.html')
     @@include('template/reviews.html')
     @@include('template/docs-screen.html')
-    <div class="map" id="map"></div>
+    <div class="map-screen" id="contacts">
+		<div class="map" id="map"></div>
+   		<div class="contacts">
+   			<div class="contacts__caption">Гостиница “Рассвет”</div>
+   			<div class="contacts__contact contacts__contact_address">г. Тотьма, ул. Кирова, д. 12</div>
+   			<div class="contacts__contact contacts__contact_phone">Бронирование: <a href="tel:7817239262410">+7 (817239) 26-24-10</a></div>
+   			<div class="contacts__contact contacts__contact_mail">E-mail: <a href="mailto:adm@rassvet-totma.ru">adm@rassvet-totma.ru</a></div>
+   			<div class="contacts__social flex">
+   				<a href="#" class="contacts__icon contacts__icon_vk"></a>
+   				<a href="#" class="contacts__icon contacts__icon_insta"></a>
+   			</div>
+   		</div>
+    </div>
     @@include('template/footer.html')
 </body>
 </html> 

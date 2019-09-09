@@ -1,9 +1,8 @@
 @@include('./lib/jquery.fancybox.min.js')
 @@include('./lib/jquery.maskedinput.js')
-@@include('./lib/wpcf7.js')
 @@include('./lib/slick.js')
 @@include('./lib/jquery.viewportchecker.js')
-$.fancybox.defaults.touch=false;
+
 $(document).ready(function(){
 	
 // mobile_menu
@@ -24,6 +23,21 @@ $(document).ready(function(){
 		}
 	});
 	
+// 	scroll
+	
+	$('.menu li a, .main-screen__button').on( 'click', function(){  
+		var el = $(this);
+		var dest = el.attr('href'); // получаем направление
+		if(dest !== undefined && dest !== '') { // проверяем существование
+			$('html').animate({ 
+				scrollTop: $(dest).offset().top // прокручиваем страницу к требуемому элементу
+			}, 500 // скорость прокрутки
+			);
+		}
+		return false;
+	});
+	
+	
 // 	slick-slider	
 	
 	$('.main-screen').slick({
@@ -31,7 +45,19 @@ $(document).ready(function(){
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		dots: true,
-		arrows: false
+		arrows: false,
+		autoplay: true,
+    	autoplaySpeed: 2000
+	});
+	
+	$('.room__slider').slick({
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: true,
+		arrows: false,
+		autoplay: true,
+    	autoplaySpeed: 2000
 	});
 	
 	$('.reviews').slick({

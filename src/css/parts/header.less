@@ -8,16 +8,26 @@ header {
 	left: 0;
 	right: 0;
 	z-index: 1;
+	padding: 50px 0;
+}
+
+header .wrapper {
+	align-items: center;
 }
 
 .logo {
     display: block;
     background: url(../../images/logo.png) no-repeat center;
-	background-size: contain;
-    width: 170px;
-    height: 55px;
+	background-size: cover;
+    width: 220px;
+    height: 60px;
 }
 
+.phone {
+	font: 700 22px "Lora";
+	color: #E6C0A2;
+	text-decoration: none;
+}
 
 header .menu {
     display: block;
@@ -33,19 +43,15 @@ header .menu li {
 
 header .menu a {
     display: inline-block;
-    font-size: 18px;
-    color: #ccc;
+    font: 400 16px "Lora";
+	color: #FFFDFD;
     text-decoration: none;
     padding: 0 25px;
     line-height: 60px;
 }
 
 header .menu a:hover{
-	color: #979797;
-}
-
-header li a:hover{
-	color: rgb(53, 72, 254);
+	color: #E6C0A2;
 }
 
 .burger {

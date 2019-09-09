@@ -11,15 +11,98 @@
 @import "parts/forms.less";
 @import "parts/popup.less";
 
+.info-screen {
+    padding: 135px 0 70px;
+}
+
+.info-screen__caption {
+    margin-bottom: 60px;
+}
+
 .docs-screen {
-	padding:  50px 0;
+	padding: 135px 0 80px;
+}
+
+.docs-screen__caption {
+    margin-bottom: 85px;
+}
+
+.documents__doc {
+	box-sizing: border-box;
+    padding: 0 20px;
+}
+
+.documents__doc a {
+	width: 100%;
+	border: 4px solid rgb(255,255,255);
+}
+
+.documents__doc a:hover {
+	border: 4px solid #E6C0A2;
+}
+
+.documents__doc a img {
+	width: 100%;
+}
+
+.map-screen {
+	position: relative;
 }
 
 .map {
 	position: relative;
 	width: 100%;
-	height: 500px;
+	height: 485px;
 }
+
+.contacts {
+	box-sizing: border-box;
+	background: #FFFFFF;
+	box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.15);
+	position: absolute;
+	left: calc((100% - 1170px)/2);
+	top: 80px;
+	padding: 62px 55px;
+	z-index: 1;
+	font: 400 15px "Lora";
+	color: #272727;
+}
+
+.contacts__caption {
+	font: 700 24px "Lora";
+	text-align: center;
+	margin-bottom: 17px;
+}
+
+.contacts__contact {
+	padding: 4px 0;
+}
+
+.contacts__contact_phone a {
+	text-decoration: none;
+	color: #272727;
+}
+
+.contacts__contact_mail a {
+	color: #A0795B;
+}
+
+.contacts__social {
+	margin-top: 17px;
+}
+
+.contacts__icon {
+	display: block;
+	background: url('../images/css_sprites.png') no-repeat -29px -262px;
+	width: 40px;
+	height: 40px;
+	margin-right: 5px;
+}
+
+.contacts__icon_insta {
+	background-position: -265px -138px;
+}
+
 
 
 

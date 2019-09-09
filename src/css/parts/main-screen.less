@@ -1,9 +1,9 @@
 .main-screen__slide {
     background: url(../../images/main.png) no-repeat center;
     background-size: cover;
-    padding: 150px 0 ;
+    padding: 265px 0 160px;
     overflow: hidden;
-	position: relative;
+    position: relative;
 }
 
 .main-screen__slide:before {
@@ -39,16 +39,57 @@
 
 .main-screen__caption {
     font: 400 80px "Lora";
-	line-height: 1;
-	color: #FFFFFF;
-	text-align: center;
-	max-width: 870px;
+    line-height: 1.15;
+    color: #fff;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 0 165px;
+	position: relative;
+}
+
+.main-screen__caption:before {
+    content: "";
+    box-sizing: border-box;
+    border-top: 2px solid #e6c0a2;
+    border-left: 2px solid #e6c0a2;
+    border-right: 2px solid #e6c0a2;
+    width: 200px;
+    height: 60px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -40px;
+    margin: 0 auto;
+}
+
+.main-screen__caption:after{
+	content: "";
+	box-sizing: border-box;
+	border-bottom: 2px solid #E6C0A2;
+	border-left: 2px solid #E6C0A2;
+	border-right: 2px solid #E6C0A2;
+	width: 200px;
+	height: 60px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -74px;
+	margin: 0 auto;
 }
 
 .main-screen__description {
 	font: 400 30px "Lora";
 	color: #FFFFFF;
 	text-align: center;
+	margin-bottom: 35px;
+}
+
+.main-screen__caption span, .main-screen__description span {
+	color: #E6C0A2;
+}
+
+.main-screen__description span span{
+	font-size: 45px;
 }
 
 

@@ -1,31 +1,72 @@
 .rooms-screen {
-	padding: 50px 0;
+    padding: 136px 0 0;
+}
+
+.rooms-screen__caption {
+	margin-bottom: 110px;
 }
 
 .room {
 	flex-wrap: nowrap;
+	margin-bottom: 75px;
+}
+
+.room:nth-child(odd) {
+	flex-direction: row-reverse;
+}
+
+.room__slider.slick-slider {
+	height: auto;
+}
+
+.room__slider .slick-dots {
+	bottom: 35px;
+}
+
+.room__img {
+	width: 570px;
+}
+
+.room__button {
+	margin: 20px auto 0;
 }
 
 .room__text {
-	flex: 1;
-	box-sizing: border-box;
-	padding: 30px 0 0 50px;
+    flex: 1;
+    box-sizing: border-box;
+    padding: 15px 0 0 30px;
+}
+
+.room:nth-child(odd) .room__text {
+    padding: 15px 30px 0 0;
 }
 
 .room__caption {
-	font: 700 28px "Lora";
-	color: #272727;
+    font: 700 28px "Lora";
+    color: #272727;
+    margin-bottom: 20px;
 }
 
 .room__caption span {
-	font: 400 45px "Lora";
+	font: 400 28px "Lora";
 	color: #A0795B;
+}
+
+.room__caption span span {
+	font-size: 40px;
+}
+
+.room__description {
+    font: 400 15px/2 "Lora";
+    color: #000000;
+	margin-bottom: 28px;
 }
 
 .room__icon {
     background: url(../../images/css_sprites.png) no-repeat -125px -261px;
 	width: 45px;
 	height: 40px;
+	margin-right: 5px;
 }
 
 .room__icon_shower {

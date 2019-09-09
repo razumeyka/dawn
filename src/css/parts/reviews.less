@@ -1,9 +1,9 @@
 .reviews-screen {
     background: url(../../images/background-wood.png) repeat center;
-	background-size: cover;
-	padding: 100px 0 115px;
+    background-size: cover;
+    padding: 135px 0 80px;
     overflow: hidden;
-	position: relative;
+    position: relative;
 }
 
 .reviews-screen:before {
@@ -16,16 +16,27 @@
 	left: 0;
 }
 
+.reviews-screen__caption {
+	margin-bottom: 100px;
+}
+
 .reviews__item {
 	flex-direction: column;
+	box-sizing: border-box;
+	padding: 0 25px;
 }
 
 .reviews__name {
-	font: 700 22px "Lora";
-	color: #E6C0A2;
+    font: 700 22px "Lora";
+    color: #e6c0a2;
+    margin-bottom: 22px;
 }
 
 .reviews__description {
-	font: 400 16px "Lora";
+	font: 400 16px/1.9 "Lora";
 	color: #FFFFFF;
+}
+
+.reviews-screen__button {
+    margin: 60px auto 0;
 }
