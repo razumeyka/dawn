@@ -84,3 +84,48 @@
 .room__icon_kitchen {
     background-position: -221px -259px;
 }
+
+
+/*media*/ 
+
+@media screen and (max-width: 1279px) {
+    .room__img {
+		width: 470px;
+	}
+}
+
+@media screen and (max-width: 1023px) {
+	.room {
+		flex-direction: column;
+		margin-bottom: 50px;
+	}
+	
+	.room:nth-child(odd) {
+		flex-direction: column;
+	}
+	
+	.room__img {
+		width: calc(100% + 40px);
+		margin: 0 -20px;
+	}
+	
+	.slick-slide img {
+		width: 100%;
+	}
+	
+	.room__text {
+		padding: 15px 0 0;
+	}
+
+	.room:nth-child(odd) .room__text {
+		padding: 15px 0 0 0;
+	}
+}
+
+@media screen and (max-width: 767px) {
+
+}
+
+@media screen and (max-width: 639px) {
+	
+}

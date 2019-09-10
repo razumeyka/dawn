@@ -21,6 +21,8 @@ header .wrapper {
 	background-size: cover;
     width: 220px;
     height: 60px;
+	position: relative;
+    z-index: 1;
 }
 
 .phone {
@@ -29,19 +31,29 @@ header .wrapper {
 	text-decoration: none;
 }
 
-header .menu {
+.phone_mobile {
+	display: none;
+	width: 40px;
+	height: 40px;
+	background: url(../../images/phone.png) no-repeat center, linear-gradient(180deg, #A0795B 0%, #45372C 100%);
+	border-radius: 50%;
+	position: relative;
+    z-index: 1;
+}
+
+.menu {
     display: block;
     padding: 0;
     margin: 0;
 }
 
-header .menu li {
+.menu li {
     list-style: none;
     float: left;
     position: relative;
 }
 
-header .menu a {
+.menu a {
     display: inline-block;
     font: 400 16px "Lora";
 	color: #FFFDFD;
@@ -50,124 +62,129 @@ header .menu a {
     line-height: 60px;
 }
 
-header .menu a:hover{
+.menu a:hover{
 	color: #E6C0A2;
 }
 
 .burger {
 	display: none;
     position: relative;
-    width: 54px;
-    height: 54px; 
+    width: 40px;
+    height: 40px; 
     margin: auto 0;
     cursor: pointer;
-    background: #747474;
-    border-radius: 4px;
-    margin-left: 10px;
 }
 
-.burger span, .burger span::before, .burger span::after {
+.burger span, .burger span::before {
 	display: block;
     cursor: pointer;
-    height: 3px;
-    width: 34px;
-    background: #fff;
+    height: 2px;
+    width: 24px;
+    background: #E9C8AE;
     position: absolute;
     top: 13px;
-    right: 10px;
+    right: 8px;
     transition: all .2s ease-in-out;
 }
 
 .burger span::before {
     content: '';
+	width: 16px;
     left: 0;
 	top: 12px;
 }
 
-.burger span::after {
-    content: '';
-    left: 0;
-    top: 23px;
-}
-
 .burger_active span {
-    background-color: transparent;
+    transform: rotate(45deg);
 }
     
-.burger_active span::before  {
-    transform: rotate(45deg);
-    top: 11px;
+.burger_active span::before {
+    transform: rotate(90deg);
+    width: 24px;
+    top: 0px;
 }
 
-.burger_active span::after  {
-    transform: rotate(-45deg);
-    top: 11px;
-} 
+.menu-mobile {
+	display: none;
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100000;
+}
 
 /*media*/ 
 
 @media screen and (max-width: 1279px) {
-	header {
-		padding: 10px 0;
-	}
 	
-	.burger {
-		display: block
-	}
-	
-	.navbar {
-		position: absolute;
-		top: 100px;
-		left: 0;
-		right: 0;
-		z-index: 1;
-	}
-	
-	header .menu {
-		display: none;
-		height: auto;
-		margin: 0;
-		width: 100%;
-		text-align: center;
-		background: #000000f2;
-		z-index: 2;
-		min-width: 360px;
-	}
-    
-    header .menu>li {
-        float: none;
-		border-bottom: 1px solid #1f1f1f;
-    }
-    
-    header .menu>li a {
-		display: block; 
-	} 
-	
-	header .menu>li:last-child a {
-		padding: 0 25px;
-	}
-	
-	header .menu li:hover .sub-menu {
-		display: none;
-	}
-	
-	header .menu li .sub-menu {
-        position: static;
-        background: #aeaeaef2;
-    }
 	
 }
 
 @media screen and (max-width: 1023px) {
+	.menu a {
+		padding: 0 10px;
+	}
 	
+	.phone {
+		display: none;
+	}
+
+	.phone_mobile {
+		display: block;
+	}
 	
 }
 
 @media screen and (max-width: 767px) {
-   
+	header {
+		background: #423429;
+	}
+	
+	.burger {
+		display: block;
+		position: relative;
+		z-index: 1;
+	}
+	
+	header .navbar {
+		display: none;
+	}
+	
+	.menu-mobile {
+		background: #423429;
+		z-index: 100;
+	}
+	
+	.menu-mobile .flex_between {
+		padding: 40px 0;
+	}
+	
+	.menu {
+		height: auto;
+		margin: 0;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		z-index: 2;
+		min-width: 360px;
+	}
+    
+    .menu>li {
+        float: none;
+    }
+    
+    .menu>li a {
+		display: block; 
+		font-size: 26px;
+		color: #FFFFFF;
+	} 
 }
 
 @media screen and (max-width: 639px) {
-    
+    .logo {
+		width: 180px;
+		height: 50px;
+	}
 	
 }

@@ -92,6 +92,10 @@
 	font-size: 45px;
 }
 
+.main-screen_mobile {
+	display: none;
+}
+
 
 /*media*/ 
 
@@ -105,12 +109,34 @@
 }
 
 @media screen and (max-width: 1023px) {
+	.main-screen__caption {
+		font-size: 35px;
+	}
 	
+	.main-screen__caption:before {
+		width: 60px;
+		height: 23px;
+		top: -40px;
+	}
+
+	.main-screen__caption:after{
+		width: 60px;
+		height: 23px;
+		bottom: -74px;
+	}
 	
 }
 
 @media screen and (max-width: 767px) {
+	.main-screen {
+		display: none;
+	}
 	
+	.main-screen_mobile {
+		display: block;
+		background: #423429;
+		padding: 265px 0 160px;
+	}
 	
 }
 

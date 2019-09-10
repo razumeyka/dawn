@@ -7,21 +7,19 @@ $(document).ready(function(){
 	
 // mobile_menu
     
-    $('.mobile-menu').click( function() { 
-        $('header .menu').slideToggle(300); 
-        $('.mobile-menu').toggleClass( 'mobile-menu_active' ); 
-    });
-	var ww=window.innerWidth;
-	$(window).resize(function(){
-		//функция вызывается всегда, при изменении размера окна. Для того, чтобы она вызывалась только при изменении ширины окна - этот пункт
-		if(ww==window.innerWidth) return;//
-		if(window.innerWidth > 1279) {
-			$('header .menu').show(); 
+    $('.burger').click( function() { 
+        $('.menu-mobile').slideToggle(500); 
+		if ($('.burger').hasClass('burger_active')) {
+			setTimeout(function() {
+				$('.burger').removeClass( 'burger_active' );
+			}, 600);
+				$('header').removeClass('header_active');
+			return;
 		} else {
-			$('header .menu').hide(); 
-			$('.mobile-menu').removeClass('mobile-menu_active'); 
+			$('.burger').addClass('burger_active');
 		}
-	});
+    });
+
 	
 // 	scroll
 	
@@ -65,7 +63,21 @@ $(document).ready(function(){
 		slidesToShow: 3,
 		slidesToScroll: 1,
 		dots: false,
-		arrows: true
+		arrows: true,
+		responsive: [
+			{
+			  breakpoint: 1024,
+			  settings: {
+				slidesToShow: 2
+			  }
+			},
+			{
+			  breakpoint: 768,
+			  settings: {
+				slidesToShow: 1
+			  }
+			},
+		]
 	});
 	
 	$('.documents').slick({
@@ -73,7 +85,58 @@ $(document).ready(function(){
 		slidesToShow: 5,
 		slidesToScroll: 1,
 		dots: false,
-		arrows: true
+		arrows: true,
+		responsive: [
+			{
+			  breakpoint: 1280,
+			  settings: {
+				slidesToShow: 4
+			  }
+			},
+			{
+			  breakpoint: 1024,
+			  settings: {
+				slidesToShow: 3
+			  }
+			},
+			{
+			  breakpoint: 768,
+			  settings: {
+				slidesToShow: 2
+			  }
+			},
+			{
+			  breakpoint: 500,
+			  settings: {
+				slidesToShow: 1
+			  }
+			},
+		]
+	});
+	
+	function mobileOnlySlider() {
+		$('.services').slick({
+			infinite: true,
+			slidesToShow: 1
+		});
+	}
+	
+
+	if(window.innerWidth < 1024) {
+		mobileOnlySlider();
+	}
+
+	$(window).resize(function(e){
+		if(window.innerWidth < 768) {
+			if(!$('.services').hasClass('slick-initialized')){
+				mobileOnlySlider();
+			}
+
+		}else{
+			if($('.services').hasClass('slick-initialized')){
+				$('.services').slick('unslick');
+			}
+		}
 	});
 	
 // mask
