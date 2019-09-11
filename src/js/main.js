@@ -141,7 +141,7 @@ $(document).ready(function(){
 	
 // mask
 	
-    $('input[type="tel"]').mask("8-999-999-99-99");
+    $('input[type="tel"]').mask("+7-999-999-99-99");
 	
 }); 
 

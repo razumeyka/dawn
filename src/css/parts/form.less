@@ -1,0 +1,114 @@
+.popup {
+    display: none;
+    background: url(../../images/pattern.png) repeat top,#fffbf7;
+    max-width: 890px;
+    padding: 35px 60px 50px;
+    margin: 15px;
+}
+
+.popup__caption {
+	font:700 35px "Lora";
+	text-align: center;
+	color: #272727;
+	margin-bottom: 32px;
+}
+
+.form__inputs {
+	margin: 0 -15px;
+}
+
+.form__field {
+    display: block;
+    box-sizing: border-box;
+    width: 50%;
+    padding: 7px 15px;
+}
+
+.form__label {
+	display: block;
+	font: 400 18px "Lora";
+	color: #4B3D31;
+	margin-bottom: 10px;
+}
+
+.form__input {
+    display: block;
+    box-sizing: border-box;
+	border: none;
+	background: #FFFDFC;
+	height: 54px;
+    width: 100%;
+	font: 400 17px "Lora";
+	color: #A0795B;
+    outline: none;
+    padding: 0 20px;
+}
+
+input:not([type=submit]):focus {
+	border: 1px solid #000;
+}
+
+.form__checkbox {
+    position: relative;
+    cursor: pointer;
+    margin: 39px 0 18px;
+    display: flex;
+    justify-content: center;
+}
+
+.form__checkbox input {
+	display: none;
+}
+
+.form__checkbox-label {
+	font: 400 16px "Lora";
+	color: #000000;
+	padding-left: 35px;
+	position: relative;
+}
+
+.form__checkbox-label:before {
+	content: '';
+	background: #ECE2D8;
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-align: center;
+    line-height: 22px;
+}
+
+.form__checkbox input:checked + .form__checkbox-label:before {
+	content: '+';
+}
+
+.form__button {
+	margin: 0 auto;
+}
+ 
+@media screen and (max-width: 1279px) { 
+	
+
+}
+
+
+@media screen and (max-width: 1023px) {
+	
+	
+}
+
+
+@media screen and (max-width: 767px) {
+	.form__field {
+		width: 100%;
+		max-width: 400px;
+	}
+
+}
+
+
+@media screen and (max-width: 639px) {
+
+
+}
