@@ -4,11 +4,11 @@
 @@include('./lib/jquery.viewportchecker.js')
 
 $(document).ready(function(){
-	
+
 // mobile_menu
-    
-    $('.burger').click( function() { 
-        $('.menu-mobile').slideToggle(500); 
+
+    $('.burger').click( function() {
+        $('.menu-mobile').slideToggle(500);
 		if ($('.burger').hasClass('burger_active')) {
 			setTimeout(function() {
 				$('.burger').removeClass( 'burger_active' );
@@ -20,24 +20,24 @@ $(document).ready(function(){
 		}
     });
 
-	
+
 // 	scroll
-	
-	$('.menu li a, .main-screen__button').on( 'click', function(){  
+
+	$('.menu li a, .main-screen__button').on( 'click', function(){
 		var el = $(this);
 		var dest = el.attr('href'); // получаем направление
 		if(dest !== undefined && dest !== '') { // проверяем существование
-			$('html').animate({ 
+			$('html').animate({
 				scrollTop: $(dest).offset().top // прокручиваем страницу к требуемому элементу
 			}, 500 // скорость прокрутки
 			);
 		}
 		return false;
 	});
-	
-	
-// 	slick-slider	
-	
+
+
+// 	slick-slider
+
 	$('.main-screen').slick({
 		infinite: true,
 		slidesToShow: 1,
@@ -45,9 +45,9 @@ $(document).ready(function(){
 		dots: true,
 		arrows: false,
 		autoplay: true,
-    	autoplaySpeed: 2000
+    	autoplaySpeed: 3000
 	});
-	
+
 	$('.room__slider').slick({
 		infinite: true,
 		slidesToShow: 1,
@@ -57,7 +57,7 @@ $(document).ready(function(){
 		autoplay: true,
     	autoplaySpeed: 2000
 	});
-	
+
 	$('.reviews').slick({
 		infinite: true,
 		slidesToShow: 3,
@@ -79,7 +79,7 @@ $(document).ready(function(){
 			},
 		]
 	});
-	
+
 	$('.documents').slick({
 		infinite: true,
 		slidesToShow: 5,
@@ -113,14 +113,14 @@ $(document).ready(function(){
 			},
 		]
 	});
-	
+
 	function mobileOnlySlider() {
 		$('.services').slick({
 			infinite: true,
 			slidesToShow: 1
 		});
 	}
-	
+
 
 	if(window.innerWidth < 1024) {
 		mobileOnlySlider();
@@ -138,15 +138,15 @@ $(document).ready(function(){
 			}
 		}
 	});
-	
+
 // mask
-	
+
     $('input[type="tel"]').mask("+7-999-999-99-99");
-	
-}); 
+
+});
 
 // 	GoogleMap
-	
+
 var markerImage, marker;
 
 function initMap() {
@@ -156,7 +156,7 @@ function initMap() {
 		position: {lat: 59.975617, lng: 42.753318},
 		map: map,
 		title:"Гостиница “Рассвет"
-	});		
+	});
 }
 
 //инициализация карты в div "map"
@@ -168,9 +168,9 @@ function initialize() {
 		scrollwheel: false,
 		center: {lat: 59.975617, lng: 42.753318},
 		zoom: 15,
-		styles: 
-		[{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#FBF8EE"}]}, 
+		styles:
+		[{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#FBF8EE"}]},
 		{"featureType":"poi","elementType":"all","stylers":[{"color":"#E0F0D0"}, {"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]}, {"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"on"},{"color":"#FCC89B"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"on"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#BBD7E5"},{"visibility":"on"}]}]
 	});
-	
+
 }
