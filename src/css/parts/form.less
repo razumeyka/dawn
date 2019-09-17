@@ -39,7 +39,6 @@
 	height: 54px;
     width: 100%;
 	font: 400 17px "Lora";
-	color: #A0795B;
     outline: none;
     padding: 0 20px;
 }
@@ -87,6 +86,89 @@ input:not([type=submit]):focus {
 	margin: 0 auto;
 }
 
+.ui-datepicker {
+    background: #FFFDFC;
+	box-shadow: 0 0 6px 0px rgba(0,0,0,0.2);
+    padding: 15px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.ui-datepicker-calendar {
+    width: 100%;
+}
+
+.ui-datepicker-prev {
+	font: 400 18px "Lora";
+	cursor: pointer;
+}
+
+.ui-datepicker-next {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	cursor: pointer;
+	font: 400 18px "Lora";
+}
+
+.ui-datepicker-title {
+	font: 400 18px "Lora";
+	color: #4B3D31;
+	margin: 10px 0;
+	text-align: center;
+}
+
+.ui-datepicker-calendar a {
+    color: #a0795b;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.select {
+	position: relative;
+}
+
+.select__field {
+	display: block;
+    box-sizing: border-box;
+	border: none;
+	background: #FFFDFC;
+	height: 54px;
+    width: 100%;
+	font: 400 17px/54px "Lora";
+    outline: none;
+    padding: 0 20px;
+    cursor: default;
+}
+
+.select ul {
+    display: none;
+    background: #fffdfc;
+    width: calc(100% - 30px);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    box-sizing: border-box;
+    top: 100px;
+    left: 15px;
+    z-index: 1;
+}
+
+.select ul li {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+    font: 400 17px/40px "Lora";
+    padding: 0 20px;
+    cursor: default;
+}
+
+.select ul li:hover {
+    background-color: #ECE2D8;
+}
+
 @media screen and (max-width: 1279px) {
 
 
@@ -100,6 +182,11 @@ input:not([type=submit]):focus {
 
 
 @media screen and (max-width: 767px) {
+	
+	.popup {
+		padding: 30px 20px;
+	}
+	
 	.form__field {
 		width: 100%;
 		max-width: 400px;

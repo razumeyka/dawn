@@ -2,6 +2,7 @@
 @@include('./lib/jquery.maskedinput.js')
 @@include('./lib/slick.js')
 @@include('./lib/jquery.viewportchecker.js')
+@@include('./lib/datepicker-ru.js')
 
 $(document).ready(function(){
 
@@ -139,38 +140,38 @@ $(document).ready(function(){
 		}
 	});
 
+	
 // mask
 
     $('input[type="tel"]').mask("+7-999-999-99-99");
+	
+	
+// datepicker
+	
+	$("#datepicker").datepicker({
+        inline: true,
+        language: 'ru',
+    });
+	
+	$("#datepicker2").datepicker({
+        inline: true,
+        language: 'ru',
+    });
+
+
+// select 
+        
+    $('.select__field').click(function(){
+		$('.select').not($(this).closest('.select')).removeClass('active').find("ul").fadeOut(200);
+		$(this).closest('.select').toggleClass('active').find("ul").fadeToggle(200);
+	})
+	
+	$('.select li').click(function(){
+		$(this).closest('.select').find('input').val($(this).data('value'));
+		$(this).closest('.select').find('.select__field').html($(this).html());
+		$(this).closest('.select').toggleClass('active').addClass('select_changed');
+        $(this).closest(".select ul").fadeOut(200); 
+	})
 
 });
 
-// 	GoogleMap
-
-var markerImage, marker;
-
-function initMap() {
-	initialize();
-
-	marker = new google.maps.Marker({
-		position: {lat: 59.975617, lng: 42.753318},
-		map: map,
-		title:"Гостиница “Рассвет"
-	});
-}
-
-//инициализация карты в div "map"
-
-var map;
-function initialize() {
-	map = new google.maps.Map(document.getElementById('map'), {
-		disableDefaultUI: true,
-		scrollwheel: false,
-		center: {lat: 59.975617, lng: 42.753318},
-		zoom: 15,
-		styles:
-		[{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#FBF8EE"}]},
-		{"featureType":"poi","elementType":"all","stylers":[{"color":"#E0F0D0"}, {"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]}, {"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"on"},{"color":"#FCC89B"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"on"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#BBD7E5"},{"visibility":"on"}]}]
-	});
-
-}

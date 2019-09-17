@@ -9,7 +9,7 @@
 				</label>
 				<label class="form__field">
 					<span class="form__label">Дата заезда</span>
-					<input class="form__input" type="text" placeholder="10.09.2019">
+					<input class="form__input" id="datepicker" type="" placeholder="10.09.2019">
 				</label>
 				<label class="form__field">
 					<span class="form__label">Телефон</span>
@@ -17,15 +17,22 @@
 				</label>
 				<label class="form__field">
 					<span class="form__label">Дата выезда</span>
-					<input class="form__input" type="text" placeholder="23.09.2019">
+					<input class="form__input" id="datepicker2" type="" placeholder="23.09.2019">
 				</label>
 				<label class="form__field">
 					<span class="form__label">E-mail</span>
 					<input class="form__input" type="mail" placeholder="info@yandex.ru">
 				</label>
-				<label class="form__field">
+				<label class="form__field select">
 					<span class="form__label">Номер</span>
-					<input class="form__input" type="text" placeholder="Двухместный">
+					<input type="hidden" name="" value="" class="">
+					   <div class="form__input select__field">Двухместный</div>
+					   <ul>
+						   <li>Одноместный</li>
+						   <li>Двухместный</li>
+						   <li>Трехместный</li>
+						   <li>Четырехместный</li>
+					   </ul>
 				</label>
 			</div>
 			<label class="form__checkbox">
