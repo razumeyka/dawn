@@ -106,7 +106,7 @@ header .wrapper {
 
 .menu-mobile {
 	display: none;
-	position: absolute;
+	position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -142,9 +142,16 @@ header .wrapper {
 		background: #423429;
 	}
 	
+	.logo {
+		margin: 0 auto;
+	}
+
 	.burger {
 		display: block;
-		position: relative;
+		background: #423429;
+		border-radius: 50%;
+		position: fixed;
+		left: 15px;
 		z-index: 1;
 	}
 	
@@ -168,7 +175,6 @@ header .wrapper {
 		height: 100%;
 		text-align: center;
 		z-index: 2;
-		min-width: 360px;
 	}
     
     .menu>li {
@@ -180,6 +186,11 @@ header .wrapper {
 		font-size: 26px;
 		color: #FFFFFF;
 	} 
+	
+	.phone_mobile {
+		position: fixed;
+		right: 15px;
+	}
 }
 
 @media screen and (max-width: 639px) {

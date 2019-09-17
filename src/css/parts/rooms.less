@@ -30,6 +30,10 @@
 .room__button {
 	margin: 20px auto 0;
 }
+	
+.room__button.room__button_mobile {
+	display: none;
+}
 
 .room__text {
     flex: 1;
@@ -54,6 +58,10 @@
 
 .room__caption span span {
 	font-size: 40px;
+}
+
+.room__caption.room__caption_mobile {
+	display: none;
 }
 
 .room__description {
@@ -97,7 +105,6 @@
 @media screen and (max-width: 1023px) {
 	.room {
 		flex-direction: column;
-		margin-bottom: 50px;
 	}
 
 	.room:nth-child(odd) {
@@ -122,6 +129,11 @@
 	}
 
 	.room__caption {
+		display: none;
+	}
+	
+	.room__caption.room__caption_mobile {
+		display: block;
 		text-align: center;
 	}
 
@@ -132,6 +144,14 @@
 
 	.room__icons {
 		justify-content: center;
+	}
+	
+	.room__button {
+		display: none;
+	}
+	
+	.room__button.room__button_mobile {
+		display: block;
 	}
 }
 
