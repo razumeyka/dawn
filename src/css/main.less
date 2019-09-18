@@ -97,14 +97,16 @@
 
 .contacts__icon {
 	display: block;
-	background: url('../images/css_sprites.png') no-repeat -29px -262px;
+	background: url('../images/VK.svg') no-repeat center;
+	background-size: contain;
 	width: 40px;
 	height: 40px;
 	margin-right: 5px;
 }
 
 .contacts__icon_insta {
-	background-position: -265px -138px;
+	background: url('../images/Instagram.svg') no-repeat center;
+	background-size: contain;
 }
 
 
@@ -126,10 +128,25 @@
 		flex-direction: column;
 		align-items: center;
 	}
+	
+	.info-screen {
+		padding: 75px 0 20px;
+	}
+	
+	.docs-screen {
+		padding: 90px 0 50px;
+	}
+	
+	.contacts {
+		padding: 40px 15px;
+	}
 }
 
 @media screen and (max-width: 767px) {
-
+	.documents__doc a {
+		max-width: 200px;
+		margin: 0 auto;
+	}
 }
 
 @media screen and (max-width: 639px) {

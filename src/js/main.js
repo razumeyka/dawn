@@ -20,11 +20,25 @@ $(document).ready(function(){
 			$('.burger').addClass('burger_active');
 		}
     });
+	
+	$('.menu-mobile li a').click( function() {
+        $('.menu-mobile').slideToggle(500);
+		$('.burger').removeClass( 'burger_active' );
+		var el = $(this);
+		var dest = el.attr('href'); // получаем направление
+		if(dest !== undefined && dest !== '') { // проверяем существование
+			$('html').animate({
+				scrollTop: $(dest).offset().top // прокручиваем страницу к требуемому элементу
+			}, 500 // скорость прокрутки
+			);
+		}
+		return false;
+    });
 
 
 // 	scroll
 
-	$('.menu li a, .main-screen__button').on( 'click', function(){
+	$('header .menu li a, .main-screen__button').on( 'click', function(){
 		var el = $(this);
 		var dest = el.attr('href'); // получаем направление
 		if(dest !== undefined && dest !== '') { // проверяем существование

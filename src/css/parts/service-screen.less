@@ -34,26 +34,31 @@
 }
 
 .services__icon {
-    background: url(../images/css_sprites.png) no-repeat -30px -28px;
+    background: url(../images/wifi-router.svg) no-repeat center;
+	background-size: contain;
     width: 62px;
     height: 60px;
     margin: 0 auto 15px;
 }
 
 .services__item_shower .services__icon {
-    background-position: -147px -28px;
+    background: url(../images/shower.svg) no-repeat center;
+	background-size: contain;
 }
 
 .services__item_tv .services__icon {
-    background-position: -28px -145px;
+    background: url(../images/television.svg) no-repeat center;
+	background-size: contain;
 }
 
 .services__item_bed .services__icon {
-    background-position: -147px -144px;
+    background: url(../images/bed.svg) no-repeat center;
+	background-size: contain;
 }
 
 .services__item_kitchen .services__icon {
-    background-position: -261px -25px;
+    background: url(../images/kitchen.svg) no-repeat center;
+	background-size: contain;
 }
 
 .services__description {
@@ -70,22 +75,41 @@
 @media screen and (max-width: 1279px) {
 
 
-
 }
 
 @media screen and (max-width: 1023px) {
 
-
-}
-
-@media screen and (max-width: 767px) {
+	.service-screen {
+		padding: 77px 0 0;
+	}
+	
 	.services {
 		margin: 0;
 	}
 
 	.services__item {
 		flex-direction: column;
+		padding: 0 20px 20px;
 	}
+	
+	.services__icon {
+		width: 110px;
+		height: 90px;
+		margin: 0 auto;
+	}
+	
+	.services__description {
+		font-size: 22px;
+	}
+	
+	.service-screen .slick-next, .service-screen .slick-prev {
+		top: calc(50% - 60px);
+	}
+}
+
+@media screen and (max-width: 767px) {
+	
+	
 }
 
 @media screen and (max-width: 639px) {

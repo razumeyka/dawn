@@ -71,27 +71,33 @@
 }
 
 .room__icon {
-    background: url(../images/css_sprites.png) no-repeat -125px -261px;
+    background: url(../images/wifi-router-2.svg) no-repeat center;
+	background-size: contain;
 	width: 45px;
 	height: 40px;
 	margin-right: 5px;
 }
 
 .room__icon_shower {
-    background-position: -371px -29px;
+     background: url(../images/shower-2.svg) no-repeat center;
+	background-size: contain;
 }
 
 .room__icon_tv {
-    background-position: -371px -125px;
+    background: url(../images/television-2.svg) no-repeat center;
+	background-size: contain;
 }
 
 .room__icon_bed {
-    background-position: -371px -222px;
+    background: url(../images/bed-2.svg) no-repeat center;
+	background-size: contain;
 }
 
 .room__icon_kitchen {
-    background-position: -221px -259px;
+    background: url(../images/kitchen-2.svg) no-repeat center;
+	background-size: contain;
 }
+
 
 
 /*media*/
@@ -103,8 +109,17 @@
 }
 
 @media screen and (max-width: 1023px) {
+	.rooms-screen {
+		padding: 90px 0 0;
+	} 
+	
+	.rooms-screen__caption {
+		margin-bottom: 75px;
+	}
+	
 	.room {
 		flex-direction: column;
+		margin-bottom: 40px;
 	}
 
 	.room:nth-child(odd) {
@@ -135,11 +150,21 @@
 	.room__caption.room__caption_mobile {
 		display: block;
 		text-align: center;
+		margin-bottom: 25px;
 	}
 
 	.room__caption>span {
 		display: block;
 		text-align: center;
+	}
+	
+	.room__caption span {
+		line-height: 1;
+	}
+	
+	room__description {
+		line-height: 1.75;
+		argin-bottom: 17px;
 	}
 
 	.room__icons {
@@ -152,6 +177,7 @@
 	
 	.room__button.room__button_mobile {
 		display: block;
+		margin: 30px auto 0;
 	}
 }
 
